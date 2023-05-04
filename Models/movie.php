@@ -6,15 +6,15 @@ class movie
     public $language;
     public $date;
 
-    public $address;
+    public $addresses;
 
 
-    public function __construct($name, $language, $date, Address $address)
+    public function __construct($name, $language, $date, $addresses)
     {
         $this->name = $name;
         $this->language = $language;
         $this->date = $date;
-        $this->address = $address;
+        $this->addresses = $addresses;
 
 
     }
@@ -27,7 +27,13 @@ class movie
 
     public function getFullAddress()
     {
-        return $this->address->street . ',' . $this->address->city . ',' . $this->address->postCode . '<br>';
+        $indirizzi = '';
+
+        foreach ($this->addresses as $address) {
+            $indirizzi .= $address->street . ', ' . $address->city . ', ' . $address->postcode . '<br>';
+        }
+
+        return $indirizzi;
 
     }
 }
