@@ -1,6 +1,6 @@
 <?php
 
-class Address
+class Generi
 {
     public $street;
     public $city;

@@ -6,15 +6,15 @@ class movie
     public $language;
     public $date;
 
-    public $addresses;
+    public $generi;
 
 
-    public function __construct($name, $language, $date, $addresses)
+    public function __construct($name, $language, $date, array $generi)
     {
         $this->name = $name;
         $this->language = $language;
         $this->date = $date;
-        $this->addresses = $addresses;
+        $this->generi = $generi;
 
 
     }
@@ -29,8 +29,8 @@ class movie
     {
         $indirizzi = '';
 
-        foreach ($this->addresses as $address) {
-            $indirizzi .= $address->street . ', ' . $address->city . ', ' . $address->postcode . '<br>';
+        foreach ($this->generi as $generi) {
+            $indirizzi .= $generi->street . ', ' . $generi->city . ', ' . $generi->postcode . '<br>';
         }
 
         return $indirizzi;

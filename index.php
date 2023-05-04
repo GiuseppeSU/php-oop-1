@@ -4,12 +4,12 @@ require __DIR__ . '/Models/movie.php';
 require __DIR__ . '/Models/Generi.php';
 
 $indirizzi = [
-    new Address("via Napoli 2", "Napoli", "32000"),
-    new Address("via Roma 2", "Roma", "35000"),
+    new Generi("Comico", "Satira", "Italiano"),
+    new Generi("Fantascienza", "Fantasy", "English"),
 
 ];
 
-$indirizzoCinema = new Address("via Napoli 2", "Napoli", "32000");
+$indirizzoCinema = new Generi("via Napoli 2", "Napoli", "32000");
 $film = new movie('Fantozzi', 'Italiano', '2000', $indirizzi);
 $film2 = new movie('Star Wars', 'Inglese', '1998', $indirizzi);
 $film->name = "Fantozzi";
