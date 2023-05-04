@@ -10,3 +10,4 @@ $fantozzi->language = "italiano";
 $fantozzi->date = 2000;
 
 echo $fantozzi->getFullName();
+echo $fantozzi->getFullAddress();

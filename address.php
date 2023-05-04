@@ -10,8 +10,11 @@ class Address
     {
 
         $this->street = $street;
-        $this->street = $city;
-        $this->street = $postCode;
+        $this->city = $city;
+        $this->postCode = $postCode;
 
     }
+
+
+
 }

@@ -23,4 +23,11 @@ class movie
     {
         return $this->name . '<br>' . $this->language . '<br>' . $this->date . '<br>';
     }
+
+
+    public function getFullAddress()
+    {
+        return $this->address->street . ',' . $this->address->city . ',' . $this->address->postCode;
+
+    }
 }
