@@ -27,7 +27,7 @@ class movie
 
     public function getFullAddress()
     {
-        return $this->address->street . ',' . $this->address->city . ',' . $this->address->postCode;
+        return $this->address->street . ',' . $this->address->city . ',' . $this->address->postCode . '<br>';
 
     }
 }

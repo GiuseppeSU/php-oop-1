@@ -1,13 +1,16 @@
 <?php
 
-require __DIR__ . '/movie.php';
-require __DIR__ . '/address.php';
+require __DIR__ . '/Models/movie.php';
+require __DIR__ . '/Models/Generi.php';
 
 $indirizzoCinema = new Address("via Napoli 2", "Napoli", "32000");
-$fantozzi = new movie('Fantozzi', 'Italiano', '2000', $indirizzoCinema);
-$fantozzi->name = "Fantozzi";
-$fantozzi->language = "italiano";
-$fantozzi->date = 2000;
+$film = new movie('Fantozzi', 'Italiano', '2000', $indirizzoCinema);
+$film2 = new movie('Star Wars', 'Inglese', '1998', new Address("via Roma 2", "Roma", "35000"));
+$film->name = "Fantozzi";
+$film->language = "italiano";
+$film->date = 2000;
 
-echo $fantozzi->getFullName();
-echo $fantozzi->getFullAddress();
+echo $film->getFullName();
+echo $film->getFullAddress();
+echo $film2->getFullName();
+echo $film2->getFullAddress();
